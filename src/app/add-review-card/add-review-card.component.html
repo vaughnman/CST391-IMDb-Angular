@@ -1,0 +1,22 @@
+<div class="card">
+    
+    <div>
+        <h2>Add Review</h2>
+        
+        <label>Username</label>
+        <input #usernameInput (keyup)="setUsername(usernameInput.value)"/>
+
+        <label> Title </label>
+        <input #titleInput (keyup)="setTitle(titleInput.value)"/>
+        
+        <label> Rating </label>
+        <input #ratingInput type="number" (keyup)="setRating(ratingInput.value)" min="0" max="5"/>
+
+        <textarea type="text" #bodyInput (keyup)="setBody(bodyInput.value)" style="width: 100%; height: 100px;"></textarea>
+
+        <button (click)="onSubmit()" [disabled]="!rating">
+            Submit
+        </button>
+    </div>
+
+</div>

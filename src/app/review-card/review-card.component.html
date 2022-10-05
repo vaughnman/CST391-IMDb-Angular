@@ -1,0 +1,13 @@
+<div class="card">
+    <div>        
+        <h3>Username: {{review?.username}}</h3>
+
+        <div>Title: {{review?.title}}</div>
+
+        <div>Rating: {{review?.rating}}</div>
+
+        <div>{{review?.body}}</div>
+        
+        <button class="deleteButton" (click)="onDelete()">Delete Review</button>
+    </div>
+</div>

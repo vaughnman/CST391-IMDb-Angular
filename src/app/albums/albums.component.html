@@ -1,0 +1,12 @@
+<div *ngIf="albums.length > 0">
+    <div class="container" *ngFor="let album of albums">
+        <album-card [album]="album"></album-card>
+    </div>
+
+</div>
+
+<div *ngIf="!albums || albums.length == 0">
+    No albums added yet!
+</div>
+
+<home-button></home-button>

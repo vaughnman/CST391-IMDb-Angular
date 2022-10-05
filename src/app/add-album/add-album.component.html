@@ -1,0 +1,31 @@
+<div class="column">
+    <img src={{imageUrl?imageUrl:undefined}} width="500px" height="500px"/>
+
+    <div>
+        <label> Image Url </label>
+        <input #imageUrlInput (keyup)="setImageUrl(imageUrlInput.value)" value="{{imageUrl}}"/>
+    </div>
+
+    <div>
+        <label> Name </label>
+        <input #nameInput (keyup)="setName(nameInput.value)" value="{{name}}"/>
+    </div>
+
+    <div>
+        <label> Band </label>
+        <input #bandInput (keyup)="setBand(bandInput.value)" value="{{band}}"/>
+    </div>
+
+    <div>
+        <label> Release Date </label>
+        <input #releaseDateInput (keyup)="setReleaseDate(releaseDateInput.value)" value="{{releaseDate}}"/>
+    </div>
+
+    <button (click)="onSubmit()" [disabled]="!name || !band"> 
+        Submit 
+    </button>
+</div>
+
+<br/>
+
+<home-button></home-button>

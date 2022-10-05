@@ -1,0 +1,21 @@
+<div class="container" *ngIf="album">
+    <img [src]="album?.imageUrl" width="700px" height="700px" />
+    <div class="container"> 
+        <h1>{{album?.name}}</h1>
+        <h2>{{album?.band}}</h2>
+        <h3>{{album?.releaseDate ? "Released " + album?.releaseDate : ""}}</h3>
+        <h3>Added {{album?.timestampAddedMs | date}}</h3>
+        <h1>{{rating? rating + "/5": ""}}</h1>
+        <button (click)="onUpdate()">Update Album</button>
+        <button class="deleteButton" (click)="onDelete()">{{this.deleted ? "Deleted": "Delete Album"}}</button>
+    </div>
+
+    <add-review-card [albumId]="album?.albumId"></add-review-card>
+    <reviews [albumId]="album?.albumId"></reviews>
+</div>
+
+<div *ngIf="!album">
+    Album not found!
+</div>
+
+<home-button></home-button>

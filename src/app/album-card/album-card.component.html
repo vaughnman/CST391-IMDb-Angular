@@ -1,0 +1,8 @@
+<div routerLink="/album/{{album?.albumId}}" class="card">
+    <img class="cardElement" [src]="album?.imageUrl" width="250px" height="250px" />
+    <div style="text-align: left; margin: 0;"> 
+        <h1 class="cardElement">{{album?.name}}</h1>
+        <h2 class="cardElement">{{album?.band}}</h2>
+        <h1 class="cardElement">{{rating ? rating + "/5": ""}}</h1> 
+    </div>
+</div>
